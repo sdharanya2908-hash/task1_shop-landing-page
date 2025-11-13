@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background-image: url('png1.png');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content button {
+  padding: 10px 25px;
+  font-size: 1rem;
+  background-color: #ff6b6b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+.hero-content button:hover {
+  background-color: #ff4c4c;
+}
+
+/* Product Section */
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  gap: 20px;
+  background-color: #f4f4f4;
+}
+
+.product-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.product-card::after {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.product-card:hover::after {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-info {
+  position: relative;
+  z-index: 1;
+}
+
+.product-info h3 {
+  margin-bottom: 5px;
+}
+
+.product-info p {
+  font-weight: bold;
+}
+
+/* About Section */
+.about {
+  position: relative;
+  padding: 0;
+}
+
+.about-bg {
+  background-image: url('png1.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.about-bg::after {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index:0;
+}
+
+.about-bg h2, .about-bg p {
+  position: relative;
+  z-index:1;
+}
+
+.about-bg h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-bg p {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.gallery h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.gallery-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery-card {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.contact p {
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card, .gallery-card {
+    width: 80%;
+    height: 200px;
+  }
+
+  .about-bg {
+    padding: 80px 20px;
+  }
+}
